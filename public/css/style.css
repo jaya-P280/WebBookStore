@@ -1,0 +1,90 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 60px 80px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1.2s ease;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.container p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #eaeaea;
+}
+
+/* Button Styling */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons a:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(90deg, #185a9d, #43cea2);
+}
+
+/* Subtle Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 30px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    width: 100%;
+  }
+}
